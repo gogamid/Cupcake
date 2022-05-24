@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.cupcake.R
 
 class MainFragment : Fragment() {
@@ -25,6 +26,6 @@ class MainFragment : Fragment() {
   }
 
   private fun orderCupcake(quantity: Int) {
-    Log.d("test", "Quantity $quantity")
+    findNavController().navigate(R.id.action_mainFragment_to_flavorFragment)
   }
 }
