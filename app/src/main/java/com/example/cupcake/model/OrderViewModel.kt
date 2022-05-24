@@ -1,5 +1,6 @@
 package com.example.cupcake.model
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -23,6 +24,7 @@ class OrderViewModel : ViewModel() {
 
   fun setFlavor(flavor: String) {
     _flavor.value = flavor
+    Log.d("test", "Flavor has been set to ${_flavor.value}")
   }
 
   fun setDate(date: String) {
