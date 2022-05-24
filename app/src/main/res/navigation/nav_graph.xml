@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.cupcake.fragments.MainFragment"
-        android:label="MainFragment" >
+        android:label="@string/app_name">
         <action
             android:id="@+id/action_mainFragment_to_flavorFragment"
             app:destination="@id/flavorFragment" />
@@ -16,8 +16,8 @@
     <fragment
         android:id="@+id/flavorFragment"
         android:name="com.example.cupcake.fragments.FlavorFragment"
-        android:label="fragment_flavor"
-        tools:layout="@layout/fragment_flavor" >
+        android:label="Choose Flavor"
+        tools:layout="@layout/fragment_flavor">
         <action
             android:id="@+id/action_flavorFragment_to_pickupDateFragment"
             app:destination="@id/pickupDateFragment" />
@@ -25,13 +25,13 @@
     <fragment
         android:id="@+id/summaryFragment"
         android:name="com.example.cupcake.fragments.SummaryFragment"
-        android:label="fragment_summary"
+        android:label="Order Summary"
         tools:layout="@layout/fragment_summary" />
     <fragment
         android:id="@+id/pickupDateFragment"
         android:name="com.example.cupcake.fragments.PickupDateFragment"
-        android:label="fragment_pickup_date"
-        tools:layout="@layout/fragment_pickup_date" >
+        android:label="Choose Pickup Date"
+        tools:layout="@layout/fragment_pickup_date">
         <action
             android:id="@+id/action_pickupDateFragment_to_summaryFragment"
             app:destination="@id/summaryFragment" />
