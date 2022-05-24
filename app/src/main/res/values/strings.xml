@@ -13,4 +13,9 @@
     <string name="subtotal">Subtotal %s</string>
     <string name="cancel">Cancel</string>
     <string name="next">Next</string>
+    <string name="total">TOTAL %s</string>
+    <string name="send">send order to another app</string>
+    <string name="pickup_date">PICKUP DATE</string>
+    <string name="quantity">QUANTITY</string>
+    <string name="flavor">FLAVOR</string>
 </resources>
