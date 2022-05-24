@@ -6,10 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.cupcake.R
+import com.example.cupcake.model.OrderViewModel
 
 class MainFragment : Fragment() {
+  private val sharedViewModel: OrderViewModel by activityViewModels()
   override fun onCreateView(
     inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?
@@ -25,6 +28,10 @@ class MainFragment : Fragment() {
   }
 
   private fun orderCupcake(quantity: Int) {
+    sharedViewModel.setQuantity(quantity)
+    if (sharedViewModel.hasNoFlavorSet()) {
+      sharedViewModel.setFlavor(getString(R.string.vanilla))
+    }
     findNavController().navigate(R.id.action_mainFragment_to_flavorFragment)
   }
 }
