@@ -28,9 +28,11 @@ class PickupDateFragment : Fragment() {
   }
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    binding.viewModel = sharedViewModel
-    binding.lifecycleOwner = viewLifecycleOwner
-    binding.pickupDateFragment = this@PickupDateFragment
+    binding.apply {
+      viewModel = sharedViewModel
+      lifecycleOwner = viewLifecycleOwner
+      pickupDateFragment = this@PickupDateFragment
+    }
   }
 
   fun goToNextScreen() {

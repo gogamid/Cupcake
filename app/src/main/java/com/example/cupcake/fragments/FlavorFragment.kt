@@ -26,9 +26,11 @@ class FlavorFragment : Fragment() {
   }
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    binding.viewModel = sharedViewModel
-    binding.lifecycleOwner = viewLifecycleOwner
-    binding.flavorFragment = this@FlavorFragment
+    binding.apply {
+      viewModel = sharedViewModel
+      lifecycleOwner = viewLifecycleOwner
+      flavorFragment = this@FlavorFragment
+    }
   }
 
   fun goToNextScreen() {

@@ -29,9 +29,11 @@ class SummaryFragment : Fragment() {
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
-    binding.viewModel = sharedViewModel
-    binding.lifecycleOwner = viewLifecycleOwner
-    binding.summaryFragment = this@SummaryFragment
+    binding.apply {
+      viewModel = sharedViewModel
+      lifecycleOwner = viewLifecycleOwner
+      summaryFragment = this@SummaryFragment
+    }
   }
 
   fun sendOrder() {
