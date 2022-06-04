@@ -33,9 +33,9 @@
                 android:id="@+id/quantity_value_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@{viewModel.quantity.toString()}"
                 app:layout_constraintStart_toStartOf="@+id/quantity_tv"
                 app:layout_constraintTop_toBottomOf="@+id/quantity_tv"
-                android:text="@{viewModel.quantity.toString()}"
                 tools:text="12" />
 
             <View
@@ -58,9 +58,9 @@
                 android:id="@+id/flavor_value_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@{viewModel.flavor}"
                 app:layout_constraintStart_toStartOf="@+id/flavor_tv"
                 app:layout_constraintTop_toBottomOf="@+id/flavor_tv"
-                android:text="@{viewModel.flavor}"
                 tools:text="Chocolate" />
 
             <View
@@ -83,9 +83,9 @@
                 android:id="@+id/date_value_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@{viewModel.date}"
                 app:layout_constraintStart_toStartOf="@+id/date_tv"
                 app:layout_constraintTop_toBottomOf="@+id/date_tv"
-                android:text="@{viewModel.date}"
                 tools:text="Dec 12" />
 
             <View
@@ -102,7 +102,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
-                android:text="@string/total"
+                android:text="@{@string/total(viewModel.price)}"
                 android:textSize="23sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/horizontal_line_d" />
