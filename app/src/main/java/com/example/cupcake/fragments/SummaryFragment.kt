@@ -31,5 +31,10 @@ class SummaryFragment : Fragment() {
     super.onViewCreated(view, savedInstanceState)
     binding.viewModel = sharedViewModel
     binding.lifecycleOwner = viewLifecycleOwner
+    binding.summaryFragment = this@SummaryFragment
+  }
+
+  fun sendOrder() {
+
   }
 }

@@ -30,10 +30,10 @@ class PickupDateFragment : Fragment() {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     binding.viewModel = sharedViewModel
     binding.lifecycleOwner = viewLifecycleOwner
-    view.findViewById<Button>(R.id.next_button).setOnClickListener { goToNextScreen() }
+    binding.pickupDateFragment = this@PickupDateFragment
   }
 
-  private fun goToNextScreen() {
+  fun goToNextScreen() {
     findNavController().navigate(R.id.action_pickupDateFragment_to_summaryFragment)
   }
 }
