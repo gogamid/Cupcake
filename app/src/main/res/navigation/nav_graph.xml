@@ -21,12 +21,19 @@
         <action
             android:id="@+id/action_flavorFragment_to_pickupDateFragment"
             app:destination="@id/pickupDateFragment" />
+        <action
+            android:id="@+id/action_flavorFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/summaryFragment"
         android:name="com.example.cupcake.fragments.SummaryFragment"
         android:label="Order Summary"
-        tools:layout="@layout/fragment_summary" />
+        tools:layout="@layout/fragment_summary" >
+        <action
+            android:id="@+id/action_summaryFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
     <fragment
         android:id="@+id/pickupDateFragment"
         android:name="com.example.cupcake.fragments.PickupDateFragment"
@@ -35,5 +42,8 @@
         <action
             android:id="@+id/action_pickupDateFragment_to_summaryFragment"
             app:destination="@id/summaryFragment" />
+        <action
+            android:id="@+id/action_pickupDateFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
 </navigation>

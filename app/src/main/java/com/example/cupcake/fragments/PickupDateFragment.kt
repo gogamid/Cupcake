@@ -38,4 +38,9 @@ class PickupDateFragment : Fragment() {
   fun goToNextScreen() {
     findNavController().navigate(R.id.action_pickupDateFragment_to_summaryFragment)
   }
+
+  fun cancelOrder() {
+    sharedViewModel.resetOrder()
+    findNavController().navigate(R.id.action_pickupDateFragment_to_mainFragment)
+  }
 }

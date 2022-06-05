@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.cupcake.R
 import com.example.cupcake.databinding.FragmentSummaryBinding
 import com.example.cupcake.model.OrderViewModel
@@ -38,5 +39,10 @@ class SummaryFragment : Fragment() {
 
   fun sendOrder() {
 
+  }
+
+  fun cancelOrder() {
+    sharedViewModel.resetOrder()
+    findNavController().navigate(R.id.action_summaryFragment_to_mainFragment)
   }
 }
